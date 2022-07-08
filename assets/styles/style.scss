@@ -1,0 +1,154 @@
+        @import './mobile';
+        @import './tablet';
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+         :root {
+            --padding1: 1rem;
+            --padding2: 2rem;
+            --padding3: 3rem;
+            --margin1: 1rem;
+            --margin2: 2rem;
+            --margin3: 3rem;
+            --primary: rgb(3, 3, 26);
+            --secondary: rgb(248, 247, 247);
+        }
+        
+        body {
+            background-color: aqua;
+        }
+        
+        input {
+            width: 200px;
+            height: 45px;
+            border-radius: 30px;
+            border: 1px solid rgb(3, 3, 26);
+            background: none;
+            transition: all 0.4s ease-in-out;
+            cursor: pointer;
+            font-size: 1.1rem;
+            &:hover {
+                color: #ffff;
+                background-color: rgb(3, 3, 26);
+                border: none;
+                transition: all 0.4s ease-in-out;
+            }
+        }
+        
+        main {
+            position: relative;
+            width: 100%;
+            height: 95vh;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            background: rgb(250, 245, 245);
+            .part1 {
+                position: relative;
+                border-right: 1px solid;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                form {
+                    position: relative;
+                    width: 60%;
+                    background-color: #fff;
+                    box-shadow: 1px 1px 20px rgba(3, 3, 26, 0.205);
+                    .row {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        padding: 2.2rem 1rem;
+                        .left-row {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            padding-right: 2rem;
+                            h5 {
+                                font-size: 1.2rem;
+                                text-transform: uppercase;
+                            }
+                        }
+                        .right-r {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            input[type="text"] {
+                                width: 200px;
+                                height: 40px;
+                                border: 1.5px solid rgba(3, 3, 26, 0.356);
+                                border-radius: 10px;
+                                outline: none;
+                                font-size: 1.2rem;
+                                padding-left: 1rem;
+                                color: rgba(0, 0, 0, 0.658);
+                            }
+                            label {
+                                font-size: 1.2rem;
+                                padding: 0 1rem;
+                                input[type="checkbox"] {
+                                    padding: 4rem;
+                                    font-size: 2rem;
+                                    border: 1px solid red;
+                                    padding: 2rem;
+                                    &:checked {
+                                        color: black;
+                                        background-color: rgb(3, 3, 26);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .calc-btn {
+                        margin: 1.5rem auto;
+                        transform: translateX(40%);
+                        width: 300px;
+                        height: 50px;
+                        cursor: pointer;
+                        border: none;
+                        background-color: rgb(15, 255, 15);
+                        border-radius: 10px;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .part2 {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                form {
+                    position: relative;
+                    border: 2px solid rgba(3, 3, 26, 0.582);
+                    width: 60%;
+                    .row {
+                        position: relative;
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        border: 1px solid rgba(0, 0, 0, 0.075);
+                        padding: 1rem 1rem;
+                        .left-row {
+                            padding-right: 2rem;
+                            h5 {
+                                font-size: 1.2rem;
+                                text-transform: uppercase;
+                                font-weight: normal;
+                            }
+                        }
+                        .right-r {
+                            text-align: center;
+                            h6 {
+                                font-size: 1.2rem;
+                                span {
+                                    padding-left: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
